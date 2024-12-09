@@ -14,9 +14,17 @@ with st.expander("Data"):
     df
     # define and display
     st.write("**X**")
-    X = df.drop("species",axis=1)
+    X = df.drop("species", axis=1)
     X
 
     st.write("**y**")
     y = df.species
     y
+
+with st.expander("Data Visualization"):
+    st.scatter_chart(
+        df,
+        x="bill_length_mm",
+        y="body_mass_g",
+        color="species",
+    )
