@@ -1,5 +1,12 @@
 import streamlit as st
 
-st.title('🎈 App Name')
+# import pandas to read the our data file
+import pandas as pd
 
-st.write('Hello world!')
+st.title("🤖 Machine Learning App")
+
+st.write("Welcome to world of Machine Learning with Streamlit.")
+
+# read the csv file
+df = pd.read_csv("data/penguins_cleaned.csv")
+df
